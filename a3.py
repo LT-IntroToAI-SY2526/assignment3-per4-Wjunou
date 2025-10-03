@@ -265,6 +265,29 @@ def query_loop() -> None:
     print("\nSo long!\n")
 
 
+    def shortest_title(matches: List[str]) -> List[str]:
+        if not movie_db:
+            return []
+        result = []
+        min_length = min(len(get_title(movie)) for movie in movie_db)
+        for movie in movie_db:
+            if len(get_title(movie)) == min_length:
+                result.append(get_title(movie))
+        return result
+
+    pa_list = [
+        (["what", "movie", "were", "made", "in", "_"],
+         title_after_year)
+
+        (["who", "directed", "%"],
+         director_by_title),
+
+        (["bye"],
+         bye_action),
+
+    ]
+
+
 # uncomment the following line once you've written all of your code and are ready to try
 # it out. Before running the following line, you should make sure that your code passes
 # the existing asserts.
