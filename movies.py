@@ -435,4 +435,17 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "spike lee",
         ],
     ),
+    (
+        "intersetllar",
+        "cristopher nolan",
+        2014,
+        [
+            "anne hathaway",
+            "jonathan nolan",
+            "matthew mcconaughey",
+            "jessica chastain",
+            "michael caine",
+            "bill irwin",
+        ],
+    ),
 ]
