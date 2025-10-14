@@ -286,6 +286,16 @@ def query_loop() -> None:
          bye_action),
 
     ]
+    def search_pa_list(src: List[str]) -> List[str]:
+        for pattern, action in pa_list:
+            matched_values = match(pattern, src)
+            if matched_values is not None:
+                answers = action(matched_values)
+                if answers:
+                    return answers
+                else:
+                    return ["No answers"]
+    return ["I don't understand"]
 
 
 # uncomment the following line once you've written all of your code and are ready to try
